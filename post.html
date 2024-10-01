@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Post a Job - FreelanceDAO</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome for icons -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('about.png') no-repeat center center/cover; /* Add your background image */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fada5b; /* Bold Yellow color */
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .job-categories {
+            margin-bottom: 40px;
+        }
+
+        .job-categories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .job-categories li {
+            font-size: 16px;
+            margin: 5px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #9ab792; /* Bright Pink */
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #7f9a7e; /* Darker shade on hover */
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Post a Job on FreelanceDAO</h2>
+        <p>Select a category and fill out the form to post your job.</p>
+
+        <div class="job-categories">
+            <h3>Available Job Categories:</h3>
+            <ul>
+                <li>Web Development</li>
+                <li>Graphic Design</li>
+                <li>Content Writing</li>
+                <li>Digital Marketing</li>
+                <li>Mobile App Development</li>
+            </ul>
+        </div>
+
+        <form id="postJobForm">
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" required>
+
+            <label for="jobCategory">Job Category:</label>
+            <select id="jobCategory" required>
+                <option value="">Select a category</option>
+                <option value="web-development">Web Development</option>
+                <option value="graphic-design">Graphic Design</option>
+                <option value="content-writing">Content Writing</option>
+                <option value="digital-marketing">Digital Marketing</option>
+                <option value="mobile-app-development">Mobile App Development</option>
+            </select>
+
+            <label for="jobDescription">Job Description:</label>
+            <textarea id="jobDescription" rows="5" required></textarea>
+
+            <button type="submit" class="btn-primary">Post Job</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 FreelanceDAO. All rights reserved.</p>
+    </footer>
+</body>
+</html>

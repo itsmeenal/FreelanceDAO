@@ -1,0 +1,204 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles with Background Video */
+header {
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #fada5b; /* Bold Yellow color */
+}
+
+.header-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.cta-buttons .btn-primary, .cta-buttons .btn-secondary {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-buttons .btn-primary {
+    background-color: #9ab792; /* Bright Pink */
+    color: white;
+}
+
+.cta-buttons .btn-secondary {
+    background-color: #6b6ba7; /* Dark Blue */
+    color: white;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* About Us Section with Background Image */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background: url('about.png') no-repeat center center/cover;
+    color: rgb(255, 255, 255);
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.about ul {
+    list-style: none;
+}
+
+.about ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.about ul li i {
+    color: #ffdd57;
+    margin-right: 10px;
+}
+
+/* Parallax Scrolling Section */
+.parallax {
+    background: url('p.png') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-attachment: fixed; /* Parallax Effect */
+}
+
+.parallax-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.parallax-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.parallax-content .btn-primary {
+    padding: 15px 30px;
+    background-color: #ffc88a;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: hwb(95 44% 46%); /* Dark Section */
+    color: white;
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.how-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #9f9779;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}

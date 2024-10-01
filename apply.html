@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apply for Freelance Work</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome for icons -->
+    <style>
+        /* Apply Background Image to Body */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('bg.png') no-repeat center center/cover; /* Change this to your desired background image */
+            color: white; /* Change text color for contrast */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 50px;
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Styles for the buttons */
+        .category-button {
+            background-color: #9ab792; /* Bright Green */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+            font-size: 18px;
+        }
+
+        .category-button:hover {
+            background-color: #7a9a7b; /* Darker shade on hover */
+        }
+
+        /* Styles for the application form */
+        .apply-form {
+            display: none; /* Hide form initially */
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333; /* Dark color for contrast */
+        }
+
+        .form-group input {
+            width: calc(100% - 10px);
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            background-color: #6b6ba7; /* Dark Blue */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Responsive design for mobile screens */
+        @media (max-width: 768px) {
+            .category-button {
+                width: 90%; /* Full-width buttons on smaller screens */
+            }
+
+            .apply-form {
+                width: 90%; /* Full-width form on smaller screens */
+                margin: 0 auto; /* Center form on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Join Our Freelance Community</h2>
+    <p>Select a category to apply for freelance work:</p>
+    
+    <div>
+        <button class="category-button" id="designButton">Graphic Design</button>
+        <button class="category-button" id="writingButton">Content Writing</button>
+        <button class="category-button" id="webDevButton">Web Development</button>
+        <button class="category-button" id="marketingButton">Digital Marketing</button>
+    </div>
+    
+    <div class="apply-form" id="applyForm">
+        <h3>Application Form</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="skills">Your Skills</label>
+                <input type="text" id="skills" name="skills" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Selected Category</label>
+                <input type="text" id="category" name="category" readonly>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Application</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Function to display the form and set the selected category
+        function showForm(category) {
+            document.getElementById('applyForm').style.display = 'block'; // Show form
+            document.getElementById('category').value = category; // Set category
+        }
+
+        // Add event listeners for category buttons
+        document.getElementById('designButton').onclick = function() {
+            showForm('Graphic Design');
+        };
+        document.getElementById('writingButton').onclick = function() {
+            showForm('Content Writing');
+        };
+        document.getElementById('webDevButton').onclick = function() {
+            showForm('Web Development');
+        };
+        document.getElementById('marketingButton').onclick = function() {
+            showForm('Digital Marketing');
+        };
+
+        // Handle form submission
+        document.querySelector("form").onsubmit = function(event) {
+            event.preventDefault(); // Prevent default form submission
+            alert("Application submitted for " + document.getElementById('category').value + "!"); // Replace with actual submission logic
+            document.getElementById('applyForm').reset(); // Reset the form
+            document.getElementById('applyForm').style.display = 'none'; // Hide the form after submission
+        }
+    </script>
+</body>
+</html>
+
